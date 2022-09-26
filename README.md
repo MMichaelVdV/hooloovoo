@@ -21,9 +21,9 @@ Then inside the conda/venv environment execute the following command:
 
 ```bash
 # fresh install
-pip install git+https://gitlab.psb.ugent.be/Utilities/hooloovoo.git
+pip install git+https://github.com/MMichaelVdV/hooloovoo.git
 # upgrade to newer version
-pip install --upgrade git+https://gitlab.psb.ugent.be/Utilities/hooloovoo.git
+pip install --upgrade git+https://github.com/MMichaelVdV/hooloovoo.git
 ```
 
 This will automatically pull in all python dependencies.
