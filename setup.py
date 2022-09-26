@@ -9,7 +9,7 @@ from setuptools import find_packages, setup
 # Package meta-data.
 NAME = 'hooloovoo'
 DESCRIPTION = 'Image analysis deep learning toolbox\'s.'
-URL = 'https://gitlab.psb.ugent.be/Brassica/script_soup/2018-09-24_brassica_segmentation'
+URL = 'https://github.com/MMichaelVdV/hooloovoo'
 EMAIL = 'sam.demeyer@psb.ugent.be'
 AUTHOR = 'Sam De Meyer <samey>'
 REQUIRES_PYTHON = '>=3.7.0'
