@@ -1,0 +1,52 @@
+device: null
+#mode: "TRAINING"
+mode: "INFERENCE"
+
+training:
+
+  paths:
+    data:
+      x: "/run/media/sam/ESD-USB/Work/20171220_brassica_leaf_photos/deeplearning/train_data/input"
+      y: "/run/media/sam/ESD-USB/Work/20171220_brassica_leaf_photos/deeplearning/train_data/target"
+      n: "/run/media/sam/ESD-USB/Work/20171220_brassica_leaf_photos/deeplearning/train_data/false"
+    cache_dir: "/run/media/sam/ESD-USB/Work/20171220_brassica_leaf_photos/deeplearning/cache"
+    checkpoint:
+      dir: "/run/media/sam/ESD-USB/Work/20171220_brassica_leaf_photos/deeplearning/saved_models/dn/v2"
+      resume_from: "last"
+#      resume_from: null
+    log_dir: null
+
+  preprocess:
+    max_size:
+      height: 600
+      width: 600
+    splits_overlap: 20
+    min_foreground_fraction: 0.05
+    image_padding: 10
+
+  augment:
+    jitter_brightness: 0.2
+    jitter_contrast: 0.2
+    jitter_saturation: 0.2
+    jitter_hue: 0.1
+
+  data_loader:
+    shuffle: true
+    num_workers: 3
+  optimizer_settings:
+    lr: 0.001
+    momentum: 0.99
+
+inference:
+  paths:
+    data:
+      x: "/run/media/sam/ESD-USB/Work/20180912_2018-2019_brassica_example_photos/20180917_test_labels"
+#      x: "/home/sam/Mounts/Midas/ngsprojects/brassica/samey/2018-2019_koolzaad-fotos/20181010/Camera2/JPGc"
+      y: "/tmp/dn_v2"
+    model: "/run/media/sam/ESD-USB/Work/20171220_brassica_leaf_photos/deeplearning/saved_models/dn/v2/last.model.pth"
+  max_size:
+    height: 2000
+    width: 2000
+  postprocess:
+    include_distance: 24
+    threshold: 0.2

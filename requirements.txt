@@ -1,0 +1,10 @@
+cytoolz
+future
+matplotlib
+numpy
+pandas
+pillow
+pyyaml
+scikit-image
+scipy
+tensorboard >= 1.14
