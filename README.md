@@ -2,7 +2,7 @@
 
 Image analysis toolbox based on a deep learning networks.
 
-Code Author: Sam De Meyer (https://github.com/SamDM)
+Code Author: Sam De Meyer
 
 🔹🔷🔹
 
